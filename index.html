@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="VILLA FOSCARI : Realization of a 3D model of Villa Foscari by Andrea Palladio" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>VILLA FOSCARI</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/dario88/Villa-Foscari---Final-Project">View on GitHub</a>
+
+          <h1 id="project_title">VILLA FOSCARI</h1>
+          <h2 id="project_tagline">Realization of a 3D model of Villa Foscari by Andrea Palladio</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/dario88/Villa-Foscari---Final-Project/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/dario88/Villa-Foscari---Final-Project/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>Villa Foscari called “LA MALCONTENTA” - Malcontenta di Mira (Venice)</h1>
+
+<hr><p>Situated along the banks of the Brenta River near the town of Malcontenta, Villa Foscari is a fine example of a unified work of architecture, in which all the parts are harmoniously organized and related to each other, and yet they vary in ways which intensify the building’s connection to the larger landscape. It is raised on a pedestal, that is characteristic of Palladio’s villas.
+<img src="https://github.com/cvdlab-cg/404040/blob/master/final-project/material/images/image1.png?raw=true" alt="image1"></p>
+
+<h2>History</h2>
+
+<p>La Malcontenta was commissioned to Palladio in the late 1550s by the brothers Nicolò and Alvise Foscari, members of a patrician Venetian family, and it was nearly complete in 1560.</p>
+
+<p>The source of the villa’s traditional name is unsettled. Perhaps it was originally the name of the village where it is situated, otherwise it could describe the melancholy woman pictured in one of the most frescos in it.</p>
+
+<p>The patrons belonged to one of the most powerful family of Venice, and hence their residence had a majestic, almost regal style, unknown in all the other Palladio’s villas; a style to which the interior decorations by Battista Franco and Gian Battista Zelotti contribute.</p>
+
+<p>In 1973 Antonio Foscari (a descendant of the Foscari lineage) and his wife, Barbara del Vicario, recovered La Malcontenta and started a painstaking process of restoring the villa to its original grandeur.</p>
+
+<p>Since 1996 the building has been conserved as part of the UNESCO World Heritage Site <a href="http://whc.unesco.org/en/list/712">City of Vicenza and the Palladian Villas of the Veneto</a>.</p>
+
+<p>Today, Villa Foscari is open to the public for visits on a limited basis.
+<img src="https://github.com/cvdlab-cg/404040/blob/master/final-project/material/images/image3.png?raw=true" alt="image3"></p>
+
+<h2>Architecture</h2>
+
+<p>The building is one simple volumetric block, under a hip roof with two attic gables, in which rectangularly proportioned rooms are organized by a central vaulted hall in the shape of a Greek cross. The major axis of this hall stretches from the main entry facade facing north and the river to the south facade and the fields.</p>
+
+<p>The villa rises on a high basement, which separates the piano nobile from the damp terrain and confers magnificence upon the whole building, raised up on a podium like an ancient temple.
+The villa sees the coexistence of motifs that recall the building traditions of the Lagoon while also evoking ancient architecture: as in Venice, the main facade turns towards the water, but the pronaos and the great stairways are modeled on the small temple at the springs of Clitumnus, well known to Palladio.</p>
+
+<p>In the front facade, on the river side, the majestic, twin, access ramps imposed a sort of ceremonial route on visiting guests: having disembarked in front of the building, they ascended the stairs toward the patron who awaited them at the center of the pronaos.
+The solution traditionally adopted by Palladio to present stiff sides to the jutting pronaos is set aside in order to provide access to the stairways.</p>
+
+<p>In contrast to this front facade, the back one is one of the most skillful creations in Palladios oeuvre: it opens to the south with two tiers of large window openings. The second of these is a thermal glass panel overlapping a three-light window, which forms an arched shape and breaks the pediment, and also brings the south light deep into the hall.
+<img src="https://github.com/cvdlab-cg/404040/blob/master/final-project/material/images/image6.png?raw=true" alt="image6"></p>
+
+<h2>Project decomposition</h2>
+
+<p>The project was developed as the final exam of Computational Graphics course, using the platform framework <a href="https://github.com/cvdlab/plasm.js">Plasm.js</a>.
+It involved the construction of 3D models of Palladian villas, so I chose Villa Foscari.
+In order to produce it, I split up the work in several parts, and moving from the simplest part to the most complex one:</p>
+
+<ol>
+<li>The realization of the internal walls;</li>
+<li>The realization of the garden;</li>
+<li>The realization of the front facade;</li>
+<li>The realization of the lateral facades;</li>
+<li>The realization of the back facade;</li>
+<li>The realization of the roof;</li>
+</ol><p>For each section I proceeded taking advantage of the symmetrical structure of the building: I created only the half part of it, and then I overturned it, using the <code>SCALE</code> affine transformation.     </p>
+
+<p>The code of the project can be found at this <a href="https://github.com/cvdlab-cg/404040/blob/master/final-project/villaFoscari.js">link</a>.   </p>
+
+<h3>Realization of gardens and internal walls</h3>
+
+<p>The realization of the gardens and the internal walls was the first step, also in order to have a reference model for make the next objects up with the accurate measures.
+However, I implemented them just making use of the <code>SIMPLEX_GRID</code> primitive.    </p>
+
+<h3>Realization of facades</h3>
+
+<p>To realize every facade, I used a bottom-up approach, that is the piecing together of systems to give rise to grander systems, thus making the original systems sub-systems of the emergent system.
+<img src="https://github.com/cvdlab-cg/404040/blob/master/final-project/material/snapshot/snapshot2.png?raw=true" alt="snapshot2"></p>
+
+<p>All the facades are composed by the same following sections: the ground level cornice, the lower wall, the lower cornice, the central wall, the central cornice, the higher wall and the higher cornice.
+So I drew them separately, using different functions. In the end, I merged them so as to render the entire facade.
+In particular, the walls, including the several windows embedded in them, were made by using the <code>SIMPLEX_GRID</code> primitive; whereas, for the cornices it has been necessary to use the transfinite Bezier (<code>BEZIER</code>) and transfinite Hermite (<code>CUBIC_HERMITE</code>) mapping functions too.
+<img src="https://github.com/cvdlab-cg/404040/blob/master/final-project/material/snapshot/snapshot3.png?raw=true" alt="snapshot3"></p>
+
+<p>The model of the front and back facade was the most complicated to achieve, because of their complex and detailed structure: the front one has also a portico, made of eight columns with ionic capitals, surmounted by a roof,  while the back one has three arched shape windows.
+<img src="https://github.com/cvdlab-cg/404040/blob/master/final-project/material/snapshot/snapshot1.png?raw=true" alt="snapshot1"></p>
+
+<p>To reproduce these object I used <code>ROTATIONAL_SURFACE</code> function, and the mapping of curved surface (e.g. <code>BEZIER(S2)(…)</code>).    </p>
+
+<h3>Realization of roof</h3>
+
+<p>The roof represents the last part of the work, that complete the all project.
+Besides, the roof could be a summary of the Computer Graphics course, because all the main functions mentioned before were used in it:</p>
+
+<ul>
+<li>simple primitive: <code>SIMPLEX_GRID</code>;</li>
+<li>Affine transformations: <code>ROTATE</code>, <code>SCALE</code> and <code>TRANSLATE</code>;</li>
+<li>Transfinite mapping function of generic degree Bezier curve: <code>BEZIER</code>;</li>
+<li>Transfinite mapping function of cubic Hermite curve: <code>CUBIC_ERMITE</code>;</li>
+<li>Rotational surface mapping function: <code>ROTATIONAL_SURFACE</code>.
+<img src="https://github.com/cvdlab-cg/404040/blob/master/final-project/material/snapshot/snapshot4.png?raw=true" alt="snapshot4"><br>
+</li>
+</ul><h3>Disclaimer</h3>
+
+<p>Some content on this site (including text and images) are taken from the web and belong to their respective owners.
+The main sources are:<br><a href="http://www.google.com/imghp">http://www.google.com/imghp</a><br><a href="http://en.wikipedia.org/">http://en.wikipedia.org/</a><br><a href="http://www.greatbuildings.com/">http://www.greatbuildings.com/</a><br><a href="http://www.cisapalladio.org/">http://www.cisapalladio.org/</a></p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">VILLA FOSCARI maintained by <a href="https://github.com/dario88">dario88</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
